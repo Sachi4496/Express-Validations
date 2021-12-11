@@ -30,7 +30,6 @@ body("email").custom( async (value) => {
 }),
 body("password").custom(async (value) => {
     const pass = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value);
-    console.log(pass);
     if(!pass){
         throw new Error("Minimum eight characters, at least one letter and one number");
     }
